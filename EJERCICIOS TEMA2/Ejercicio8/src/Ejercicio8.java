@@ -7,5 +7,6 @@ public class Ejercicio8 {
         char letra_e= 'e';
         String palabraClase=( Character.toString(letra_c)+letra_l+letra_a+letra_s+letra_e) ;
         System.out.println(palabraClase);
+        //De primeras no te deja pero añadiendo el comando character.tostring que convierte a los char a manera que se pueda leer en string
     }
 }
