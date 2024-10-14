@@ -6,8 +6,6 @@ public class Ejercicio7 {
         char letra_d= 'd';
         String palabraMenta= "Menta";
         String palabraCocacola="Cocacola";
-        System.out.println(palabraMenta + " "+ palabraCocacola +" "+letra_a+" " +letra_b+" "+ letra_c+" "+ letra_d);
-        System.out.println(palabraCocacola+ palabraMenta);
-        //No es posible ya que un print un solo print no deja. 
+        System.out.println(palabraMenta + " "+ palabraCocacola +" "+letra_a+" " +letra_b+" "+ letra_c+" "+ letra_d); 
     }
 }
