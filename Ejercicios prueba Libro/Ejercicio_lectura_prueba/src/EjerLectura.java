@@ -1,4 +1,4 @@
-public class App {
+public class EjerLectura {
     public static void main(String[] args) throws Exception {
         String Nombre;
         System.out.print("Dime tu nombre por favor: ");
