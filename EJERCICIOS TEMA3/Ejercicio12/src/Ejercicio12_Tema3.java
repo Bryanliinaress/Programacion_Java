@@ -8,7 +8,7 @@ public class Ejercicio12_Tema3 {
         System.out.print("¿Qué nota quieres sacar en el trimestre? ");
         double notaTrimestre= s.nextDouble();
         double notaSegundoExamen=(notaTrimestre-(notaPrimerExamen*0.4))/0.6;
-        System.out.printf("Para tener un "+ notaTrimestre+" en el trimestre necesitas sacar un "+ notaSegundoExamen +" en el segundo examen");
+        System.out.printf("Para tener un "+ "\033[32m"+ notaTrimestre+ "\033[39;49m en el trimestre necesitas sacar un\033[31m %-2.2f\033[39;49m en el segundo examen",notaSegundoExamen);
         s.close();
 
     }
