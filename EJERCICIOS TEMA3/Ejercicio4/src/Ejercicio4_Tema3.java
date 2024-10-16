@@ -10,7 +10,7 @@ public class Ejercicio4_Tema3 {
         double resta= num1-num2;
         double multiplicacion= num1*num2;
         double division= num1/num2;
-        System.out.println("La suma es igual a: "+ConsoleColors.GREEN+ suma + ConsoleColors.RESET);
+        System.out.println("La suma es igual a: "+ ConsoleColors.GREEN + suma + ConsoleColors.RESET);
         System.out.println("La resta es igual a:\033[32m "+resta+"\033[39;49m");
         System.out.println("La multiplicacion es igual a:\033[32m "+multiplicacion+"\033[39;49m");
         System.out.println("La division es igual a:\033[32m "+division+"\033[39;49m");
