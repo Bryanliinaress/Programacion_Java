@@ -8,7 +8,7 @@ public class Ejercicio6_Tema3 {
         double alturaTriangulo= s.nextDouble();
         double baseTriangulo= s.nextDouble();
         double areaTriangulo= (baseTriangulo*alturaTriangulo)/2;
-        System.out.printf("La area de tu triangulo es de %-4.2f cm^2", areaTriangulo);
+        System.out.printf("La area de tu triangulo es de "+ ConsoleColors.BLUE + areaTriangulo + ConsoleColors.RESET +  " cm^2");
         s.close();
     }
 }
