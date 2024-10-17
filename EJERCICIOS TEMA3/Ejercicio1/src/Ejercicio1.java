@@ -8,7 +8,7 @@ public class Ejercicio1 {
         double num1= s.nextDouble();
         double num2= s.nextDouble();
         double resultado= num1*num2;
-        System.out.printf("Tus numeros multiplicados son igual a= %6.2f", resultado);
+        System.out.printf("Tus numeros multiplicados son igual a= %-6.2f", resultado);
         s.close();
     }
 }
