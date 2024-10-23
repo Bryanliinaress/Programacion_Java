@@ -12,12 +12,12 @@ public class Ejercicio2_Tema4 {
         Scanner s = new Scanner(System.in);
         System.out.print("Dame una hora leon (formato 24h):");
         double hora = s.nextDouble();
-        if (hora > 6 && hora < 12) {
+        if ((hora > 6) && (hora < 12)) {
             System.out.println("Buenos dias guapeton.");
-        } else if (hora > 12 && hora < 20) {
+        } else if ((hora > 12) && (hora < 20)) {
             System.out.println("Buenas tardes, tomamos cafe?");
         } else {
-            System.out.println("Buenas noches que descanses.");
+            System.out.println("Buenas noches que descanses, princesa.");
         }
         s.close();
     }
