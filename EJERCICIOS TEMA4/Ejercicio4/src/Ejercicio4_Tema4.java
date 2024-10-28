@@ -16,5 +16,6 @@ public class Ejercicio4_Tema4 {
             sueldo=(horasExtras*16)+(40*12);
             System.out.println("El sueldo semanal que le corresponde es de "+sueldo+" euros");
         }
+        s.close();
     }
 }
