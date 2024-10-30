@@ -4,7 +4,7 @@ public class Ejercicio2_Examen {
     public static final String CYAN_BACKGROUND = "\033[46m"; // CYAN
     public static final String RESET = "\033[0m"; // Text Reset
 
-    public static void main(String[] args) throws Exception {
+        public static void main(String[] args) throws Exception {
         // Primero declaro la clase Scanner para poder leer los datos que introduzca el
         // usuario
         Scanner s = new Scanner(System.in);
@@ -63,5 +63,5 @@ public class Ejercicio2_Examen {
         // \u2500=─
         // \u2514=└
         // \u2518=┘
-    }
+        }
 }
