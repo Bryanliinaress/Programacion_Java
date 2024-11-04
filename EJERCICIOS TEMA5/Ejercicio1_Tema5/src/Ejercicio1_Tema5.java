@@ -5,5 +5,5 @@ public class Ejercicio1_Tema5 {
             multiplosCinco+=5;
             System.out.println("5x"+i+"="+multiplosCinco);
         }
-    }
+    }   
 }
