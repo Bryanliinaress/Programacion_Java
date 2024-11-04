@@ -10,11 +10,11 @@ public class Ejercicio18_Tema4 {
 
         } else if (numero < 10) {
             System.out.println("La primera cifra es " + numero);
-        } else if ((numero > 10) && (numero < 100)) {
+        } else if ((numero >= 10) && (numero < 100)) {
             System.out.println("La primera cifra es " + numero / 10);
-        }else if ((numero > 100) && (numero < 1000)) {
+        }else if ((numero >= 100) && (numero < 1000)) {
             System.out.println("La primera cifra es " + numero / 100);
-        }else if ((numero > 100) && (numero < 1000)) {
+        }else if ((numero >= 1000) && (numero < 10000)) {
             System.out.println("La primera cifra es " + numero / 1000);
         }else if (numero <= 99999) {
             System.out.println("La primera cifra es " + numero / 10000);

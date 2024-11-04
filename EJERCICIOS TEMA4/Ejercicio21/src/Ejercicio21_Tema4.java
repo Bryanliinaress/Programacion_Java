@@ -10,14 +10,14 @@ public class Ejercicio21_Tema4 {
         System.out.print("Introduce tu nota del segundo examen: ");
         double notaExamen2= s.nextDouble();
         double notaMedia= (notaExamen1+notaExamen2)/2;
-        if (notaMedia>5) {
+        if (notaMedia>=5) {
             System.out.println("Tu nota en programación es \033[33m"+notaMedia+"\033[49;39m");
         }else {
             System.out.println("¿Cual ha sido tu resultado en la recuperación (apto/no apto)?");
             s.nextLine();
             String respuestaRecuperacion= s.nextLine();
             if (respuestaRecuperacion.equals("apto")) {
-                System.out.println("Tu nota en progración es\033[31m 5\033[49;39m");
+                System.out.println("Tu nota en programación es\033[31m 5\033[49;39m");
             }else{
                 System.out.println("Tu nota en programación es \033[31m"+notaMedia+"\033[49;39m");
             }
@@ -25,4 +25,3 @@ public class Ejercicio21_Tema4 {
         s.close();
     }
 }
-  
