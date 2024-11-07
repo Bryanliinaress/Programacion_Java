@@ -7,5 +7,6 @@ public class Ejercicio3_Tema5 {
             System.out.println("5x"+i+"= "+multiplosCinco);
             i++;
         }while(i<21);
+        
     }
 }
