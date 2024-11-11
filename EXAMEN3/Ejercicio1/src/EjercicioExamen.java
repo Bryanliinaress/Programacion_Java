@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class EjercicioExamen {
     public static void main(String[] args) throws Exception {
-        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);                                                     
         System.out.println("\033[42m ¡Bienvenido/a a la plataforma digital!\033[49;39m");
         System.out.println("");
         System.out.print("Por favor, dinos tu nombre: ");
@@ -27,6 +27,7 @@ public class EjercicioExamen {
             System.out.println("2. Estandar - 15\u20ac");
             System.out.println("3. Premium - 20\u20ac");
             int tipoSuscripcion = s.nextInt();
+            System.out.println("");
             switch (tipoSuscripcion) {
                 case 1:
                     precioSuscripcion=10;
