@@ -14,7 +14,7 @@ public class ServiceTest {
         @Test
         public void test2(){
             Service service = mock(Service.class);
-        when(service.says()).thenReturn("Hello");
-        Assert.assertEquals("Hello", service.says());
+            when(service.says()).thenReturn("Hello");
+            Assert.assertEquals("Hello", service.says());
     }
 }
