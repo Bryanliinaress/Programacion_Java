@@ -7,6 +7,6 @@ public class Ejercicio3_Prueba {
     public void testContarCaracteres() {
         Ejercicio3 service = new Ejercicio3();
         
-        Assert.assertEquals(1, service.contarCaracteres("Hola", 'a'));
+        Assert.assertEquals(3, service.contarCaracteres("Caracola", 'a'));
     }
 }
