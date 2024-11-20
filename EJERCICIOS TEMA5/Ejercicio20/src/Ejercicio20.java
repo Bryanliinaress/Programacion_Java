@@ -17,7 +17,7 @@ public class Ejercicio20 {
                 System.out.print(" ");
             }
             System.out.print(simboloPiramide);
-            for(int i=1 ; i<= espacioInterior; i++){
+            for(int i=2 ; i<= espacioInterior; i++){
                 System.out.print(" ");
             }
             if(base>1){
@@ -27,8 +27,9 @@ public class Ejercicio20 {
             espacioInterior+=2;
             espacioPordelante--;
         }
-        for (int i =1 ; i <=base*2; i++)
+        for (int i =2 ; i <=base*2; i++){
         System.out.print(simboloPiramide);
+        }
         s.close();
     }
 }
