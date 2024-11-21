@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Ejercicio26 {
     public static void main(String[] args) throws Exception {
         Scanner s = new Scanner(System.in);
@@ -18,5 +17,9 @@ public class Ejercicio26 {
             }
         }    
         s.close();
+        if (primo.EsPrimo(numero)) {
+            System.out.println("El numero no primo");
+        }else
+        System.out.println("El numero es primo");
     }
 }
