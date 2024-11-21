@@ -15,7 +15,7 @@ public class Ejercicio_Examen4 {
                         if (contieneNumero(contraseñaUsuario)) {
                             if (caracterEspecial(contraseñaUsuario)) {
                                 System.out.println("\033[0;92mContraseña segura.\033[0m");
-                                contraseñaValida = 5;
+                                contraseñaValida =5;
                             } else {
                                 System.out.println(
                                         "\033[0;91mError: La contraseña debe contener al menos un caracter especial.\033[0m");
@@ -37,7 +37,7 @@ public class Ejercicio_Examen4 {
             }
             contraseñaValida++;
         }
-        if (contraseñaValida > 3) {
+        if (contraseñaValida == 4) {
             System.out.println("\033[0;93mNúmero máximo de intentos alcanzado.\033[0m");
         }
         s.close();
@@ -88,15 +88,15 @@ public class Ejercicio_Examen4 {
     }
 
     public static boolean contieneNumero(String contraseñaNumero) {
-        char letraMinuscula = 0;
+        char letraNumero = 0;
         char letra;
         for (int i = 0; i < contraseñaNumero.length(); i++) {
             letra = contraseñaNumero.charAt(i);
-            if (letra == 0 || letra ==1 || letra ==2 || letra ==3 || letra == 4 || letra == 5 || letra==6 || letra==7 || letra ==8 || letra ==9) {
-                letraMinuscula=1;
+            if (Character.isDigit(letra)) {
+                letraNumero = letra;
             }
         }
-        if (letraMinuscula != 0) {
+        if (letraNumero != 0) {
             return true;
         } else {
             return false;
@@ -105,16 +105,20 @@ public class Ejercicio_Examen4 {
 
     public static boolean caracterEspecial(String contraseñaCaracterEspecial) {
         String caracteresEspeciales = "!@#$%^&*()-_+=<>?/.,;:";
-        int letra = 0;
-        for (int i = 0; i < caracteresEspeciales.length(); i++) {
-            if (caracteresEspeciales.indexOf(contraseñaCaracterEspecial.charAt(i)) != -1) {
-                letra = 1;
+        char letraCaracterEspecial = 0;
+        char letra;
+        for (int i = 0; i < contraseñaCaracterEspecial.length(); i++){
+            letra = contraseñaCaracterEspecial.charAt(i);
+            for (int j = 0; j < caracteresEspeciales.length(); j++){
+                if (letra == caracteresEspeciales.charAt(j)){
+                    letraCaracterEspecial = letra;
+                }
             }
         }
-        if (letra != 0) {
-            return true;
-        } else {
-            return false;
+        if (letraCaracterEspecial != 0) {
+        return true;
+        } else{
+            return  false;
         }
     }
 }
