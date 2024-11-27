@@ -22,7 +22,7 @@ public class Ejercicio27_Tema6 {
         if (respuestaJugador.equals(respuestaOrdenador)) {
             System.out.println("Empate");
         } else{
-            int ganador=2;
+            int ganador=0;
             switch (respuestaJugador) {
                 case "piedra":
                     if (respuestaOrdenador.equals("tijera")) {
