@@ -14,5 +14,6 @@ public class Ejercicio13 {
                 contadorPositivos ++;
         }
         System.out.println("Has introducido "+contadorNegativos+" negativos y "+ contadorPositivos+" positivos.");
+        s.close();
     }
 }
