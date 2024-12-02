@@ -1,9 +1,9 @@
 public class RepositorioUsuarios {
     public String usuarioExistente() {
-        return "Existe";
+        return "";
     }
 
     public String usuarioNoExistente() {
-        return "No Existe";
+        return "";
     }
 }
