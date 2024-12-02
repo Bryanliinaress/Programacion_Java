@@ -112,5 +112,4 @@ public class Ejercicio_Examen {
         dado2 = (int) (Math.random() * 6) + 1;
         return dado2;
     }
-
 }
