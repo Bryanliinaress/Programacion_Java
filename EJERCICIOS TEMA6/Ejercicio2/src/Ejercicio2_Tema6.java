@@ -1,3 +1,5 @@
+
+
 public class Ejercicio2_Tema6 {
     public static void main(String[] args) throws Exception {
         String palo="";

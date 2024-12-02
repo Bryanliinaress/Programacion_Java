@@ -3,9 +3,9 @@ public class Ejercicio26 {
     public static void main(String[] args) throws Exception {
         Scanner s = new Scanner(System.in);
         System.out.print("Dame un numero de minimo 10 digitos: ");
-        long numero = s.nextInt();
+        int numero = s.nextInt();
         System.out.print("Introduce un digito: ");
-        int digitoIntroducido = s.nextInt();
+        long digitoIntroducido = s.nextInt();
         int i=0;
         if (numero < 10) {
             System.out.println("El numero ingresado no tiene 10 digitos");
@@ -26,7 +26,7 @@ public class Ejercicio26 {
             }
         }    
         s.close();
-        if (primo.EsPrimo(numero)) {
+        if (primo.EsPrimo( (int)numero)) {
             System.out.println("El numero no primo");
         }else
         System.out.println("El numero es primo");
