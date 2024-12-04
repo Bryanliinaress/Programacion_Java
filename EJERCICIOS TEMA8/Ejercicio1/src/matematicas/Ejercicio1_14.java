@@ -8,7 +8,7 @@ public class Ejercicio1_14 {
             numeroReverso = (numeroReverso * 10) + digito;
             numero = numero / 10;
         }
-        return numeroReverso;
+        return numeroReverso;        
     }
 
     public static boolean esCapicua(int numero) {
@@ -23,7 +23,7 @@ public class Ejercicio1_14 {
     public static boolean EsPrimo(int numero) {
         for (int i = 2; i < numero; i++) {
             if ((numero % i) == 0) {
-                return false;
+                return false;      
             }
         }
         return true;
