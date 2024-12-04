@@ -60,7 +60,7 @@ public class CadenasTexto {
     public static boolean esPalindromas (String frase1, String frase2){
         String fraseInvertida = CadenasTexto.invertirPalabra(frase2);
         String fraseNormal= CadenasTexto.sinEspacios(frase1);
-        if (fraseNormal== fraseInvertida) {
+        if (fraseNormal.equals(fraseInvertida)) {
             return true;
         }else{
             return false;
