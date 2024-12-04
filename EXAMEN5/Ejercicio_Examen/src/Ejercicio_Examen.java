@@ -1,3 +1,4 @@
+package org.alanturing.Texto;
 import java.util.Scanner;
 
 public class Ejercicio_Examen {
