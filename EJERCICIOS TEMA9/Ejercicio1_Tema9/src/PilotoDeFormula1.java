@@ -1,25 +1,26 @@
 public class PilotoDeFormula1 {
-    String marcaRepresenta,nombre;
+    String marcaRepresenta, nombre;
     int edad;
 
     PilotoDeFormula1(String nombrePiloto, int n, String mr) {
-        this.nombre=nombrePiloto;
-        this.edad= n;
-        this.marcaRepresenta= mr;
+        this.nombre = nombrePiloto;
+        this.edad = n;
+        this.marcaRepresenta = mr;
     }
 
-    String getMarcaReperesenta (){
+    String getMarcaReperesenta() {
         return marcaRepresenta;
     }
 
-    void marcaRepresenta(){
+    void marcaRepresenta() {
         System.out.println(getMarcaReperesenta());
     }
-    void nombrePiloto(){
+
+    void nombrePiloto() {
         System.out.println(this.nombre);
     }
 
-    void sonidoCoche(){
+    void sonidoCoche() {
         System.out.println("fiuuuuuuuu");
     }
 
