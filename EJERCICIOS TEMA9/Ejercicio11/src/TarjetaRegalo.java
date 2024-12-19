@@ -14,7 +14,7 @@ public class TarjetaRegalo {
     public String toString() {
         return "Tarjeta nº " + numeroTarjeta + " - Saldo " + cantidadDinero;
     }
-
+    
     public void gasta(double numeroAGastar) {
         if ((cantidadDinero - numeroAGastar) < 0) {
             System.out.println("No tienes suficiente saldo para gastar " + numeroAGastar + "eur. ");
