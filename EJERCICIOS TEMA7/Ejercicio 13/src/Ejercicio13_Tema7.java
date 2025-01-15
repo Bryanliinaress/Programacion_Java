@@ -16,7 +16,7 @@ public class Ejercicio13_Tema7 {
                 minimo = arr[i];
                 comprobador1 = i;
             }
-
+            
             if (arr[i] > maximo) {
                 maximo = arr[i];
                 comprobador2 = i;
