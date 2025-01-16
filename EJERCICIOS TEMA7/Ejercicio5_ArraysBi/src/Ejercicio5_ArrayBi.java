@@ -24,8 +24,8 @@ public class Ejercicio5_ArrayBi {
                 }else{
                     System.out.print("**"+array[i][a]+"**  " );
                 }
-
             }
+            System.out.println("");
         }
     }
 }
