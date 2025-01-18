@@ -116,10 +116,9 @@ public class ColeccionDeDiscos {
                                 comprobadorAutor = ArrayDiscos[i].getAutor();
                                 if (nombreAutor.equals(comprobadorAutor)) {
                                     System.out.println(ArrayDiscos[i]);
-                                }
-                                if (i == 4 && (!nombreAutor.equals(comprobadorAutor))) {
+                                }else if (i == 4 && (!nombreAutor.equals(comprobadorAutor))) {
                                     System.out
-                                            .println("Lo siento no tenemos nada en la base de datos sobre ese autor.");
+                                            .println("Eso es todo lo que tengo sobre ese autor");
                                 }
                             }
                             break;
@@ -132,9 +131,8 @@ public class ColeccionDeDiscos {
                                 if (genero.equals(comprobadorGenero)) {
                                     System.out.println(ArrayDiscos[i]);
                                     
-                                }
-                                if (i== 4 && (!genero.equals(comprobadorGenero))) {
-                                    System.out.println("Lo siento, no tengo nada en la base de datos sobre ese genero");
+                                }else if (i== 4 && (!genero.equals(comprobadorGenero))) {
+                                    System.out.println("Eso es todo lo que tengo sobre ese genero");
                                 }
                             }
                         break;
@@ -148,9 +146,8 @@ public class ColeccionDeDiscos {
                                 comprobadorDuracion=ArrayDiscos[i].getDuracion();
                                 if (comprobadorDuracion<maximoDuracion && comprobadorDuracion>minimoDuracion) {
                                     System.out.println(ArrayDiscos[i]);
-                                }
-                                if (i==4 && ((comprobadorDuracion>maximoDuracion && comprobadorDuracion>minimoDuracion)||( comprobadorDuracion<maximoDuracion && comprobadorDuracion<minimoDuracion))) {
-                                    System.out.println("Lo siento, no tengo nada en la base de datos sobre ese rango de duracion.");
+                                } else if (i==4 && ((comprobadorDuracion>maximoDuracion && comprobadorDuracion>minimoDuracion)||( comprobadorDuracion<maximoDuracion && comprobadorDuracion<minimoDuracion))) {
+                                    System.out.println("Eso es todo lo que tengo en la base de datos.");
                                 }
                             }
 
