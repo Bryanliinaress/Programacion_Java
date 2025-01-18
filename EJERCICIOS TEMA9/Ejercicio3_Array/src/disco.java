@@ -57,6 +57,6 @@ public class disco {
     }
 
     public String toString (){
-        return codigo+" "+nombre+" "+ generoMusical+ " " +duracion+" "+autor;
+        return "Codigo: "+codigo+"| Nombre: "+nombre+"| Genero: "+ generoMusical+ "| Duracion: " +duracion+"| Autor: "+autor;
     }
 }
