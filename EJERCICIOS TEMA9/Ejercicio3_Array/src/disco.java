@@ -1,5 +1,5 @@
 public class disco {
-    String codigo= "LIBRE";
+    private String codigo= "LIBRE";
     private String nombre;
     private String autor;
     private String generoMusical;

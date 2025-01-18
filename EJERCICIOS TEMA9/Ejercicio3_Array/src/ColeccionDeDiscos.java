@@ -9,6 +9,9 @@ public class ColeccionDeDiscos {
         int opcion = 0;
         String codigoIntroducido;
         disco[] ArrayDiscos = new disco[N];
+        for (int a = 0; a < N; a++) {
+            ArrayDiscos[a] = new disco();
+        }
         do {
             System.out.println("Introduzca la accion que desea realizar.");
             System.out.println("========================================");
@@ -18,11 +21,6 @@ public class ColeccionDeDiscos {
             System.out.println("4. Salir.");
             System.out.println("Introduzca su opcion: ");
             opcion = s.nextInt();
-
-            for (int a = 0; a < N; a++) {
-                ArrayDiscos[a] = new disco();
-            }
-            System.out.println(ArrayDiscos[0]);
 
             switch (opcion) {
                 case 1:
@@ -35,19 +33,20 @@ public class ColeccionDeDiscos {
                         if (codigo.equals("LIBRE")) {
                             estaCompleto = true;
                             System.out.println("Introduzca el codigo del disco: ");
-                            ArrayDiscos[i].setCodigo(s.nextLine());
-                            ArrayDiscos[i].setCodigo(s.nextLine());
+                            s.nextLine();
+                            codigoIntroducido= s.nextLine();
+                            ArrayDiscos[i].setCodigo(codigoIntroducido);
                             System.out.println("Introduzca el nombre del disco: ");
                             ArrayDiscos[i].setNombre(s.nextLine());
                             System.out.println("Introduzca el genero musical del disco: ");
                             ArrayDiscos[i].setGeneroMusical(s.nextLine());
                             System.out.println("Introduzca la duracion del disco en segundos: ");
                             ArrayDiscos[i].setDuracion(s.nextInt());
-
                             System.out.println("Introduzca el autor del disco: ");
+                            s.nextLine();
                             ArrayDiscos[i].setAutor(s.nextLine());
-                            s.next();
                         }
+
                         if (i == 19) {
                             System.out.println(
                                     "Lo siento, la base de datos esta lleno primero debe elimanar un disco antes de continuar. ");
@@ -82,6 +81,7 @@ public class ColeccionDeDiscos {
                     break;
             }
         } while (opcion != 4);
+        s.close();
     }
 
 }
