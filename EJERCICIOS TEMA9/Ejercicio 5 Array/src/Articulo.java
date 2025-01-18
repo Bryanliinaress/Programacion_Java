@@ -5,6 +5,10 @@ public class Articulo {
     private double precioDeVenta;
     private int stock;
 
+
+    public Articulo(){
+    }
+
     public String getCodigo() {
         return codigo;
     }
@@ -44,5 +48,10 @@ public class Articulo {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
+    public String toString(){
+        return "Cod: "+codigo+". Descripcion: "+descripcion;
+    }
+
 
 }

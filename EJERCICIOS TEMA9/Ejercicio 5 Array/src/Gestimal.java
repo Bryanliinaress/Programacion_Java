@@ -50,6 +50,7 @@ public class Gestimal {
                         }
                     }
                     break;
+                    
                 /////////////////////////////////////////////////////////////////////////////
                 // ALTA /////////////////////////////////////////////////////////////////////
                 /////////////////////////////////////////////////////////////////////////////
@@ -57,7 +58,7 @@ public class Gestimal {
                     System.out.println("\nNUEVO ARTÍCULO");
                     System.out.println("==============");
                     // Busca la primera posición libre del array
-                    primeraLibre = 0;
+                    primeraLibre = 0;//1
                     codigo = articulo[primeraLibre].getCodigo();
                     while ((primeraLibre < N) && (!(codigo.equals("LIBRE")))) {
                         primeraLibre++;
