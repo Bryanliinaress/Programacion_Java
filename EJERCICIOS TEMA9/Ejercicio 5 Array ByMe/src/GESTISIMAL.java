@@ -207,6 +207,7 @@ public class GESTISIMAL {
                     }
                     break;
                 default:
+                    System.out.println("La opcion escogida no corresponde a ninguna de las mostradas.");
                     break;
             }
         } while (Opcion != 7);
