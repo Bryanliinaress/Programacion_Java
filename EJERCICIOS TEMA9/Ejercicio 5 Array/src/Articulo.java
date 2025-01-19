@@ -49,7 +49,7 @@ public class Articulo {
         this.stock = stock;
     }
 
-    public String toString(){
+    public String toString(int i){
         return "Cod: "+codigo+". Descripcion: "+descripcion;
     }
 

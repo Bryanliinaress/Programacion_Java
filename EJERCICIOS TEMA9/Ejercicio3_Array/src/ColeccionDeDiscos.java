@@ -116,7 +116,7 @@ public class ColeccionDeDiscos {
                                 comprobadorAutor = ArrayDiscos[i].getAutor();
                                 if (nombreAutor.equals(comprobadorAutor)) {
                                     System.out.println(ArrayDiscos[i]);
-                                }else if (i == 4 && (!nombreAutor.equals(comprobadorAutor))) {
+                                } else if (i == 4 && (!nombreAutor.equals(comprobadorAutor))) {
                                     System.out
                                             .println("Eso es todo lo que tengo sobre ese autor");
                                 }
@@ -125,33 +125,38 @@ public class ColeccionDeDiscos {
 
                         case 3:
                             System.out.println("De que genero desea la lista: ");
-                            String genero=s.nextLine();
-                            for (i=0; i<N ; i++){
-                                comprobadorGenero= ArrayDiscos[i].getGeneroMusical();
+                            String genero = s.nextLine();
+                            for (i = 0; i < N; i++) {
+                                comprobadorGenero = ArrayDiscos[i].getGeneroMusical();
                                 if (genero.equals(comprobadorGenero)) {
                                     System.out.println(ArrayDiscos[i]);
-                                    
-                                }else if (i== 4 && (!genero.equals(comprobadorGenero))) {
+
+                                } else if (i == 4 && (!genero.equals(comprobadorGenero))) {
                                     System.out.println("Eso es todo lo que tengo sobre ese genero");
                                 }
                             }
-                        break;
+                            break;
 
                         case 4:
-                            System.out.println("Introduzca de que rango de duracion minima desea que sea la lista (introduzca la cantidad en segundos): ");
-                            minimoDuracion= s.nextInt();
-                            System.out.println("Introduzca de que rango de duracion maxima desea que sea la lista (introduzca la cantidad en segundos):");
-                            maximoDuracion= s.nextInt();
-                            for (i = 0 ; i<N ; i++){
-                                comprobadorDuracion=ArrayDiscos[i].getDuracion();
-                                if (comprobadorDuracion<maximoDuracion && comprobadorDuracion>minimoDuracion) {
+                            System.out.println(
+                                    "Introduzca de que rango de duracion minima desea que sea la lista (introduzca la cantidad en segundos): ");
+                            minimoDuracion = s.nextInt();
+                            System.out.println(
+                                    "Introduzca de que rango de duracion maxima desea que sea la lista (introduzca la cantidad en segundos):");
+                            maximoDuracion = s.nextInt();
+                            for (i = 0; i < N; i++) {
+                                comprobadorDuracion = ArrayDiscos[i].getDuracion();
+                                if (comprobadorDuracion < maximoDuracion && comprobadorDuracion > minimoDuracion) {
                                     System.out.println(ArrayDiscos[i]);
-                                } else if (i==4 && ((comprobadorDuracion>maximoDuracion && comprobadorDuracion>minimoDuracion)||( comprobadorDuracion<maximoDuracion && comprobadorDuracion<minimoDuracion))) {
+                                } else if (i == 4 && ((comprobadorDuracion > maximoDuracion
+                                        && comprobadorDuracion > minimoDuracion)
+                                        || (comprobadorDuracion < maximoDuracion
+                                                && comprobadorDuracion < minimoDuracion))) {
                                     System.out.println("Eso es todo lo que tengo en la base de datos.");
                                 }
                             }
 
-                        break; 
+                            break;
                         default:
                             break;
                     }
