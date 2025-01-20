@@ -46,7 +46,7 @@ public class Gestimal {
                     System.out.println("=======");
                     for (i = 0; i < N; i++) {
                         if (!articulo[i].getCodigo().equals("LIBRE")) {
-                            System.out.println(articulo[i]);
+                            System.out.println(articulo[i].toString(i));
                         }
                     }
                     break;
