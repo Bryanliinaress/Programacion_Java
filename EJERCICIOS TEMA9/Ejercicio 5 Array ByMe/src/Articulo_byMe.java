@@ -24,7 +24,7 @@ public class Articulo_byMe {
     public String getCodigo() {
         return codigo;
     }
-
+    
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;

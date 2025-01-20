@@ -49,8 +49,7 @@ public class ColeccionDeDiscos {
                                     System.out.println("Esta repetido");
                                     existecodigo = true;
                                     estaCompleto = false;
-                                }
-                                if (a == 4) {
+                                }else if (a == 4) {
                                     ArrayDiscos[i].setCodigo(codigoIntroducido);
                                     System.out.println("Introduzca el nombre del disco: ");
                                     ArrayDiscos[i].setNombre(s.nextLine());
@@ -64,8 +63,7 @@ public class ColeccionDeDiscos {
                                     existecodigo = true;
                                 }
                             }
-                        }
-                        if (i == 4) {
+                        }else if (i == 4) {
                             System.out.println(
                                     " Usted tiene la base de datos llena antes de introducir otro disco mas debe eliminar uno, gracias.");
                             estaCompleto = true;

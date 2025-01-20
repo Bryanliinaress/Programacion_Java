@@ -206,11 +206,17 @@ public class GESTISIMAL {
                         }
                     }
                     break;
+
+                    case 7:
+                        System.out.println("Ha salido del programa con exito.");
+                    break;
                 default:
                     System.out.println("La opcion escogida no corresponde a ninguna de las mostradas.");
                     break;
             }
         } while (Opcion != 7);
         s.close();
+
+
     }
 }
