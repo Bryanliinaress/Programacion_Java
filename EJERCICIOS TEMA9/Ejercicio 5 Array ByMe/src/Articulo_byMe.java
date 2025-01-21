@@ -17,7 +17,6 @@ public class Articulo_byMe {
         this.stockProducto=stockProducto;
     }
 
-
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
@@ -25,14 +24,12 @@ public class Articulo_byMe {
         return codigo;
     }
     
-
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
     public String getDescripcion() {
         return descripcion;
     }
-    
 
     public void setPrecioCompra(double precioCompra) {
         this.precioCompra = precioCompra;
@@ -41,14 +38,12 @@ public class Articulo_byMe {
         return precioCompra;
     }
 
-
     public void setPrecioVenta(double precioVenta) {
         this.precioVenta = precioVenta;
     }
     public double getPrecioVenta() {
         return precioVenta;
     }
-
 
     public void setStockProducto(int stockProducto) {
         this.stockProducto = stockProducto;
@@ -59,7 +54,7 @@ public class Articulo_byMe {
 
     public String  toString(int numeroProducto){
         String listado="\nInformacion de producto "+ numeroProducto; 
-        listado +=     "\n=======================";
+        listado+=      "\n=======================";
         listado += "\nCodigo del producto: "+codigo;
         listado += "\nDescripción del producto: "+descripcion;
         listado += "\nPrecio de compra del producto: "+ precioCompra;
@@ -75,5 +70,4 @@ public class Articulo_byMe {
         setPrecioVenta(0);
         setStockProducto(0);
     }
-
 }

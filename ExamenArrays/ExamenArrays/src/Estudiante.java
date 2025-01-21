@@ -14,7 +14,7 @@ public class Estudiante {
     public Estudiante(String nombre) {
         this.nombre = nombre;
         for (int i = 0; i < 10; i++) {
-            notas = new double[10];
+            notas[i] = 0.0;
         }
         cantidadNotas = -1;
     }
@@ -26,12 +26,17 @@ public class Estudiante {
         return nombre;
     }
 
+    public double[] getNotas() {
+        return notas;
+    }
+
     /*
      * Aqui hago un metodo para agregar un nombre nuevo
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     /*
      * Aqui hago un metodo para agregar una nota nueva
      */
@@ -39,33 +44,57 @@ public class Estudiante {
         cantidadNotas++;
         if (cantidadNotas < 10) {
             notas[cantidadNotas] = nota;
+        } else {
+            System.out.println("No se puede agregar  mas notas. ");
         }
     }
+
     /*
      * Aqui hago un metodo para calcular la media de las notas.
      */
     public double calcularPromedio() {
-        boolean notasValidas = false;
-        int i = -1;
+        double calculo = 0;
+        int contadorNotas = 0;
         double acomuladorNotas = 0;
-        while (!notasValidas) {
-            i++;
-            double comprobadorNotas = notas[i];
-            if (comprobadorNotas != 0 && i < 10) {
-                acomuladorNotas += comprobadorNotas;
-                notasValidas = true;
+        for (double d : notas) {
+            acomuladorNotas += d;
+            if (d != 0) {
+                contadorNotas++;
             }
         }
-        return acomuladorNotas / cantidadNotas;
+        calculo = acomuladorNotas / contadorNotas;
+        /*
+         * while (!notasValidas) {
+         * i++;
+         * double comprobadorNotas = notas[i];
+         * if (comprobadorNotas != 0.0) {
+         * acomuladorNotas += comprobadorNotas;
+         * }
+         * if (i==9 ) {
+         * calculo=acomuladorNotas / cantidadNotas;
+         * notasValidas=true;
+         * }
+         * }
+         */
+        if (acomuladorNotas == 0) {
+            calculo = 0;
+        }
+
+        return calculo;
     }
+
     /*
      * Aqui hago el metodo tu string para mostrar la informacion del estudiante.
      */
     public String toString() {
-        String frase="";
+        String frase = "";
+        System.out.print("Estudiante[nombre=" + nombre + "; notas=") ;
         for (double d : notas) {
-            frase = "Estudiante[nombre=" + nombre + "; notas=" +d+ "; promedio=" + calcularPromedio() + "]";   
+            if (d !=0) {
+                System.out.print( d+", " );
+            }
         }
+        System.out.println("; promedio=" + calcularPromedio() + "]");
         return frase;
     }
 }

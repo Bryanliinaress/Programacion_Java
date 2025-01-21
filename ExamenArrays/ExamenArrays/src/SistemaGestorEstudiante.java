@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class SistemaGestorEstudiante {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int opcion = 0;
+        int Opcion = 0;
         String nombreEstudiante;
-        double notaEstudiante; 
+        double notaEstudiante;
         GestorEstudiante gestarEstudiantes = new GestorEstudiante();
-        SistemaGestorEstudiante sistemaGestorEstudiante= new SistemaGestorEstudiante();
+        SistemaGestorEstudiante sistemaGestorEstudiante = new SistemaGestorEstudiante();
         do {
             System.out.println("");
             System.out.println("Sistema Gestor De Estudiantes");
@@ -20,10 +20,10 @@ public class SistemaGestorEstudiante {
             System.out.println("5. Buscar un estudiante por su nombre");
             System.out.println("6. Salir");
             System.out.print("Dime que desea hacer: ");
-            opcion = s.nextInt();
-            s.nextLine();
+            Opcion = Integer.parseInt(s.nextLine());
+            System.out.println("");
 
-            switch (opcion) {
+            switch (Opcion) {
                 case 1:
                     System.out.println("Dime el nombre de tu estudiante: ");
                     nombreEstudiante = s.nextLine();
@@ -31,40 +31,44 @@ public class SistemaGestorEstudiante {
                     break;
 
                 case 2:
+
                     System.out.println("Dime el nombre del estudiante : ");
-                    nombreEstudiante=s.nextLine();
+                    nombreEstudiante = s.nextLine();
                     System.out.println("Dime su nota: ");
-                    notaEstudiante=sistemaGestorEstudiante.comprobadorNumeroReal();
+                    notaEstudiante = sistemaGestorEstudiante.comprobadorNumeroReal();
                     gestarEstudiantes.agregarNotasEstudiante(nombreEstudiante, notaEstudiante);
                     break;
 
-                case 3: 
+                case 3:
                     gestarEstudiantes.mostrarEstudiante();
-                break;
+                    break;
 
-                case 4: 
+                case 4:
                     System.out.println("Dime sobre que valor empieze a mostrar los promedios: ");
-                    gestarEstudiantes.mostrarEstudiantesConPromedioMayorA(sistemaGestorEstudiante.comprobadorNumeroReal());
-                break;
+                    gestarEstudiantes
+                            .mostrarEstudiantesConPromedioMayorA(sistemaGestorEstudiante.comprobadorNumeroReal());
+                    break;
 
-                case 5: 
+                case 5:
                     System.out.println("Dime a que estudiante quieres buscar: ");
-                    nombreEstudiante=s.nextLine();
+                    nombreEstudiante = s.nextLine();
                     gestarEstudiantes.buscarEstudiante(nombreEstudiante);
-                break; 
+                    break;
 
-                case 6: 
+                case 6:
                     System.out.println("Gracias por usar este gestor de sistema de estudiantes.");
-                break;
+                    break;
                 default:
                     System.out.println("La opción elegida es incorrecta: ");
                     break;
             }
-        } while (opcion != 6);
+        } while (Opcion != 6);
         s.close();
     }
+
     /*
-     * hago una funcion con un try catch para comprobar que el valor que me da es valido 
+     * hago una funcion con un try catch para comprobar que el valor que me da es
+     * valido
      * y lo meto en un while para que me lo siga mandando mientras no sea valido
      */
     public double comprobadorNumeroReal() {
@@ -74,14 +78,13 @@ public class SistemaGestorEstudiante {
         while (!numeroValido) {
             try {
                 System.out.println("Introduce un numero real, por favor: ");
-                numeroIntroducido = s.nextDouble();
+                numeroIntroducido = Double.parseDouble(s.nextLine());
                 numeroValido = true;
             } catch (Exception e) {
                 System.out.println("El valor introducido no es valido.");
-                s.nextLine();
+                s.next();
             }
         }
-        s.close();
         return numeroIntroducido;
     }
 
