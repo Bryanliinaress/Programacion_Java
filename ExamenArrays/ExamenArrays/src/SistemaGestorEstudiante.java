@@ -26,6 +26,7 @@ public class SistemaGestorEstudiante {
             catch(Exception e){
 
             }            
+            s.nextLine();
             System.out.println("");
 
             switch (Opcion) {
