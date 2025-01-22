@@ -20,7 +20,12 @@ public class SistemaGestorEstudiante {
             System.out.println("5. Buscar un estudiante por su nombre");
             System.out.println("6. Salir");
             System.out.print("Dime que desea hacer: ");
-            Opcion = Integer.parseInt(s.nextLine());
+            try{
+                Opcion = Integer.parseInt(s.nextLine());
+            }
+            catch(Exception e){
+
+            }            
             System.out.println("");
 
             switch (Opcion) {
@@ -34,7 +39,7 @@ public class SistemaGestorEstudiante {
 
                     System.out.println("Dime el nombre del estudiante : ");
                     nombreEstudiante = s.nextLine();
-                    System.out.println("Dime su nota: ");
+                    System.out.print("Dime su nota. ");
                     notaEstudiante = sistemaGestorEstudiante.comprobadorNumeroReal();
                     gestarEstudiantes.agregarNotasEstudiante(nombreEstudiante, notaEstudiante);
                     break;
@@ -44,7 +49,7 @@ public class SistemaGestorEstudiante {
                     break;
 
                 case 4:
-                    System.out.println("Dime sobre que valor empieze a mostrar los promedios: ");
+                    System.out.print("Dime sobre que valor empieze a mostrar los promedios. ");
                     gestarEstudiantes
                             .mostrarEstudiantesConPromedioMayorA(sistemaGestorEstudiante.comprobadorNumeroReal());
                     break;
@@ -59,7 +64,7 @@ public class SistemaGestorEstudiante {
                     System.out.println("Gracias por usar este gestor de sistema de estudiantes.");
                     break;
                 default:
-                    System.out.println("La opción elegida es incorrecta: ");
+                    System.out.println("La opción elegida es incorrecta. ");
                     break;
             }
         } while (Opcion != 6);
@@ -72,7 +77,7 @@ public class SistemaGestorEstudiante {
      * y lo meto en un while para que me lo siga mandando mientras no sea valido
      */
     public double comprobadorNumeroReal() {
-        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in) ;
         boolean numeroValido = false;
         double numeroIntroducido = 0;
         while (!numeroValido) {

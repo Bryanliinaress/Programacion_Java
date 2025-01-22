@@ -44,6 +44,7 @@ public class Estudiante {
         cantidadNotas++;
         if (cantidadNotas < 10) {
             notas[cantidadNotas] = nota;
+            System.out.println("Nota agregada con éxito. ");
         } else {
             System.out.println("No se puede agregar  mas notas. ");
         }

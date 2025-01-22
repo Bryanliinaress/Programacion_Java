@@ -21,7 +21,7 @@ public class GestorEstudiante {
 
     public void buscarEstudiante(String nombre) {
         int a = -1;
-        boolean estudianteEncontrado = false;
+        boolean estudianteEncontrado = false ;
         while (!estudianteEncontrado) {
             a++;
             String nombresEstudiantes = estudiantes[a].getNombre();
