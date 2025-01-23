@@ -1,8 +1,9 @@
 public class Computadora extends Dispositivo implements Encendible {
-    private String ram;
+    private String ram;  
     private String disco;
     private String procesador;
     private String estadoCompu="Apagado";
+    private String programa;
 
     public Computadora(String ram, String disco, String procesador, String marca){
         super(marca);
@@ -11,7 +12,7 @@ public class Computadora extends Dispositivo implements Encendible {
         this.procesador=procesador;
     }
 
-    public void setDisco(String disco) {
+    public void setDisco(String disco) { 
         this.disco = disco;
     }
     public String getDisco() {
@@ -41,7 +42,7 @@ public class Computadora extends Dispositivo implements Encendible {
 
     @Override
     public String toString(){
-        return "La computadora de la marca "+super.getMarca()+" se encuentra "+estadoCompu+" y cuenta con una ram de "+ram+", un disco de "+disco+" y un procesador "+procesador+". "+super.toString();
+        return "La computadora de la marca "+marca+" se encuentra "+estadoCompu+" y cuenta con una ram de "+ram+", un disco de "+disco+" y un procesador "+procesador+". Tienes en total "+super.getContadorDispositivos()+" dispositivos agregados";
     }
 
     @Override
@@ -51,6 +52,6 @@ public class Computadora extends Dispositivo implements Encendible {
 
     @Override
     public void encender(){
-        this.estadoCompu="Encendido";
+        this.estadoCompu="encendido";
     }
 }

@@ -14,5 +14,24 @@ public class GestorDispositivos {
         System.out.println("");
         System.out.println(misDisp[0].toString());
         System.out.println("");
+
+        ((Encendible)misDisp[0]).apagar();
+
+        System.out.println("");
+        System.out.println(misDisp[0].toString());
+        System.out.println("");
+
+        misDisp[2]= new Televisor(15, "muy mala", "razer");
+
+        System.out.println("");
+        System.out.println(misDisp[2].toString());
+        System.out.println("");
+        System.out.println(Dispositivo.getContadorDispositivos());
+
+
+        for(int i =0; i<Dispositivo.getContadorDispositivos(); i++){
+            ((Encendible)misDisp[i]).encender();
+            System.out.println(misDisp[i]);
+        }
     }
 }

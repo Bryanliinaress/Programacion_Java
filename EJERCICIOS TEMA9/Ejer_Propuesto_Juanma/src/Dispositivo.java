@@ -1,7 +1,7 @@
 public abstract class Dispositivo {
     
     private static int contadorDispositivos=0 ;
-    private String marca;
+    protected     String marca;
     
     public Dispositivo(String marca){
         this.marca=marca;
@@ -19,7 +19,7 @@ public abstract class Dispositivo {
         return marca;
     }
 
-    public String toString(){
-        return "Tienes "+Dispositivo.contadorDispositivos+" dispositivos guadados";
+    public String toString(){ 
+        return "Tienes "+Dispositivo.contadorDispositivos+" dispositivos guadados de diferente marcas esta es "+marca;
     }
 }

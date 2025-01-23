@@ -2,6 +2,7 @@ public class Televisor extends Dispositivo implements Encendible {
     private int diagonal;
     private String tecnologia;
     private String estadoTele="Apagado";
+    private String canal;
 
 
     public Televisor (int diagonal, String tecnologia, String marca){
@@ -10,7 +11,7 @@ public class Televisor extends Dispositivo implements Encendible {
         this.diagonal=diagonal;
     }
 
-    public void setDiagonal(int diagonal) {
+    public void setDiagonal(int diagonal) { 
         this.diagonal = diagonal;
     }
     public int getDiagonal() {
