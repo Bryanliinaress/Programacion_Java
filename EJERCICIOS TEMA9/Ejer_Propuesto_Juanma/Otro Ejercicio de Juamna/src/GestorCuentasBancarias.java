@@ -6,6 +6,7 @@ public class GestorCuentasBancarias {
 
         CuentaBancaria[] misCuentas = new CuentaBancaria[10];
         String numeroCuenta;
+        int contadorCuentas = -1;
         int tipoCuenta;
         String comprobadorCuentas;
         boolean cuentaEncontrada = false;
@@ -13,7 +14,7 @@ public class GestorCuentasBancarias {
         int indicadorCuentas = -1;
         int opcion = 0;
         do {
-            System.out.println(""); 
+            System.out.println("");
             System.out.println("Gestor de cuentas Bancarias. ");
             System.out.println("===========================");
             System.out.println("1. Crear Cuenta Bancaria ");
@@ -29,6 +30,7 @@ public class GestorCuentasBancarias {
 
             switch (opcion) {
                 case 1:
+                    contadorCuentas++;
                     System.out.println("Elección de tipo de cuenta");
                     System.out.println("1. Cuenta Corriente");
                     System.out.println("2. Cuenta de Ahorros");
@@ -84,7 +86,7 @@ public class GestorCuentasBancarias {
                             System.out.print("Digame de cuenta va a ser el ingreso: ");
                             cantidadDinero = s.nextDouble();
                             ((Operaciones) misCuentas[i]).realizarOperacion(1, cantidadDinero);
-                        } else if (i == 9) {
+                        } else if (i == contadorCuentas) {
                             cuentaEncontrada = true;
                             System.out.println(
                                     "No e encontrado ninguna Cuenta Bancaria con ese numero de cuenta, lo siento.");
@@ -108,7 +110,7 @@ public class GestorCuentasBancarias {
                             System.out.print("Digame de cuenta va a ser el retiro: ");
                             cantidadDinero = s.nextDouble();
                             ((Operaciones) misCuentas[a]).realizarOperacion(2, cantidadDinero);
-                        } else if (a == 9) {
+                        } else if (a == contadorCuentas) {
                             cuentaEncontrada = true;
                             System.out.println(
                                     "No e encontrado ninguna Cuenta Bancaria con ese numero de cuenta, lo siento.");
@@ -128,7 +130,7 @@ public class GestorCuentasBancarias {
                         if (comprobadorCuentas.equals(numeroCuenta)) {
                             cuentaEncontrada = true;
                             ((Operaciones) misCuentas[c]).mostrarResultado();
-                        } else if (c == 9) {
+                        } else if (c == contadorCuentas) {
                             cuentaEncontrada = true;
                             System.out.println(
                                     "No e encontrado ninguna Cuenta Bancaria con ese numero de cuenta, lo siento.");
