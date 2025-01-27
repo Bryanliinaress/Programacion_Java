@@ -4,12 +4,11 @@ public class GestorDispositivos {
 
         misDisp[0]= new Computadora("16 Gb", "1 Tb", "muy bueno", "logitech");
         misDisp[1]= new Televisor(18, "Oled", "LG");
-
+        
         System.out.println(misDisp[0].toString());
         System.out.println("");
         System.out.println(misDisp[1].toString());
 
-        ((Encendible)misDisp[0]).encender();
         
         System.out.println("");
         System.out.println(misDisp[0].toString());
@@ -27,11 +26,12 @@ public class GestorDispositivos {
         System.out.println(misDisp[2].toString());
         System.out.println("");
         System.out.println(Dispositivo.getContadorDispositivos());
-
+        
 
         for(int i =0; i<Dispositivo.getContadorDispositivos(); i++){
-            ((Encendible)misDisp[i]).encender();
+            System.out.println("");
             System.out.println(misDisp[i]);
+            
         }
     }
 }

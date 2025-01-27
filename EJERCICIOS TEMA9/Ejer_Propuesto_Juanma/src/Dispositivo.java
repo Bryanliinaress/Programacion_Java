@@ -1,7 +1,7 @@
 public abstract class Dispositivo {
     
     private static int contadorDispositivos=0 ;
-    protected     String marca;
+    protected String marca;
     
     public Dispositivo(String marca){
         this.marca=marca;
