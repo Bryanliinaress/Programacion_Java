@@ -24,7 +24,7 @@ public class Empresa {
         /**
          * Le meto un objeto hijo de empleado a cada espacio de la array de empleado
          */
-        misEmpleado[0] = new Tecnico("Juan Pérez", 38, "T003", 2100, 5, "pp");
+        misEmpleado[0] = new Tecnico("Juan Pérez", 38, "T003", 2100, 5, "Redes");
         misEmpleado[1] = new Gestor("Ana González", 43, "G017", 3000, 8, 65000);
         misEmpleado[2] = new Administrativo("Carlos Cieza", 34, "A009", 1500, 2, "Recursos humanos");
 
