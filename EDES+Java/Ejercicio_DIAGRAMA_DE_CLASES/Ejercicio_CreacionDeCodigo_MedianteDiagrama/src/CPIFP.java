@@ -109,7 +109,7 @@ public class CPIFP implements Serializable<Estudiante> {
                     if (id != (deserializar(linea).getId())) {
                         bw.write(linea + "\n");
                     } else {
-                        bw.write(serializar(estudianteModificado)+ "\n");
+                        bw.write(serializar(estudianteModificado) + "\n");
                     }
                 }
                 br.close();
@@ -150,7 +150,7 @@ public class CPIFP implements Serializable<Estudiante> {
             BufferedReader br = new BufferedReader(new FileReader(nombreDeFichero));
             String linea = "";
             while ((linea = br.readLine()) != null) {
-                
+
                 frase += (deserializar(linea)).toString() + "\n";
             }
             br.close();
@@ -163,7 +163,7 @@ public class CPIFP implements Serializable<Estudiante> {
 
     @Override
     public String serializar(Estudiante estudiante) {
-        return estudiante.getNombre()+ ";"+estudiante.getId();
+        return estudiante.getNombre() + ";" + estudiante.getId();
     }
 
     @Override

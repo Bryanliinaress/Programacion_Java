@@ -18,6 +18,6 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Nombre: "+this.nombre + "; ID: " + this.id;
+        return "Nombre: " + this.nombre + "; ID: " + this.id;
     }
 }

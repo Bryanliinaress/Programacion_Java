@@ -1,6 +1,6 @@
-public interface Serializable <T>{
-    
-    public String  serializar (T T);
+public interface Serializable<T> {
 
-    public  T deserializar (String datos );
+    public String serializar(T T);
+
+    public T deserializar(String datos);
 }
