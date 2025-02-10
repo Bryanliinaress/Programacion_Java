@@ -20,6 +20,7 @@ public class CPIFP implements Serializable<Estudiante> {
     }
 
     public boolean añadir(int id, String nombre) {
+
         if (!obtenerEstudiante(id).equals("No hay ningun estudiante con ese id")) {
             return false;
         } else {
@@ -59,7 +60,7 @@ public class CPIFP implements Serializable<Estudiante> {
                 }
 
                 BufferedReader br = new BufferedReader(new FileReader(ficheroModificado));
-                BufferedWriter bw = new BufferedWriter(new FileWriter(ficheroOriginal, true));
+                BufferedWriter bw = new BufferedWriter(new FileWriter(ficheroOriginal));
                 String linea = "";
                 while ((linea = br.readLine()) != null) {
                     if (id != (deserializar(linea).getId())) {
@@ -101,14 +102,14 @@ public class CPIFP implements Serializable<Estudiante> {
                 }
 
                 BufferedReader br = new BufferedReader(new FileReader(ficheroModificado));
-                BufferedWriter bw = new BufferedWriter(new FileWriter(ficheroOriginal, true));
+                BufferedWriter bw = new BufferedWriter(new FileWriter(ficheroOriginal));
                 String linea = "";
                 Estudiante estudianteModificado = new Estudiante(id, nombre);
                 while ((linea = br.readLine()) != null) {
                     if (id != (deserializar(linea).getId())) {
                         bw.write(linea + "\n");
                     } else {
-                        bw.write(serializar(estudianteModificado));
+                        bw.write(serializar(estudianteModificado)+ "\n");
                     }
                 }
                 br.close();
@@ -149,7 +150,8 @@ public class CPIFP implements Serializable<Estudiante> {
             BufferedReader br = new BufferedReader(new FileReader(nombreDeFichero));
             String linea = "";
             while ((linea = br.readLine()) != null) {
-                frase += linea + "\n";
+                
+                frase += (deserializar(linea)).toString() + "\n";
             }
             br.close();
         } catch (Exception e) {
@@ -161,7 +163,7 @@ public class CPIFP implements Serializable<Estudiante> {
 
     @Override
     public String serializar(Estudiante estudiante) {
-        return estudiante.toString();
+        return estudiante.getNombre()+ ";"+estudiante.getId();
     }
 
     @Override
