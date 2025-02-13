@@ -16,7 +16,7 @@ public class GestorCPIFP {
                 System.out.println("Valor introducido no valido.");
                 System.out.println();
                 System.out.print("Por favor, introduzca el numero de la opcion: ");
-            }
+            } 
         }
         return opcion;
 

@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @version 1.0
  */
 public class PruebaServiciosHotel {
-
+    static Scanner s = new Scanner(System.in);
     /**
      * Esta funcion lee la opcion para el menu y contiene un try catch para
      * comprobar que es un entero lo introducido
@@ -17,7 +17,6 @@ public class PruebaServiciosHotel {
      * @return numero entero
      */
     public static int leerOpcion() {
-        Scanner s = new Scanner(System.in);
         int opcion = 0;
         boolean datoValido = false;
         while (!datoValido) {
@@ -49,9 +48,9 @@ public class PruebaServiciosHotel {
      */
     public static String funcionLeerString() {
         String palabra = "";
-        Scanner s = new Scanner(System.in);
         palabra = s.nextLine();
         palabra = palabra.toUpperCase();
+
         return palabra;
     }
 
@@ -75,7 +74,7 @@ public class PruebaServiciosHotel {
             System.out.println("5. Salir");
             System.out.print("Dime que opcion desea hacer: ");
             opcion = leerOpcion();
-
+            s.nextLine();
             switch (opcion) {
                 case 1:
                     System.out.println();
@@ -125,4 +124,5 @@ public class PruebaServiciosHotel {
             }
         } while (opcion != 5);
     }
+    
 }

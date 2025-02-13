@@ -8,7 +8,7 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public int getId() {
+    public int getId() { 
         return id;
     }
 

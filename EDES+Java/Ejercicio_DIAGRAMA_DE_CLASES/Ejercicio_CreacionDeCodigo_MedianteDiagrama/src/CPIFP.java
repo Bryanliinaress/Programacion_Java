@@ -9,11 +9,11 @@ public class CPIFP implements Serializable<Estudiante> {
 
     private String nombre;
     private String direccion;
-    private int telefono;
+    private int telefono; 
     private String nombreDeFichero;
 
     public CPIFP(String nombre, String direccion, int telefono, String nombreFichero) {
-        this.nombre = nombre;
+        this.nombre = nombre; 
         this.direccion = direccion;
         this.telefono = telefono;
         this.nombreDeFichero = nombreFichero;

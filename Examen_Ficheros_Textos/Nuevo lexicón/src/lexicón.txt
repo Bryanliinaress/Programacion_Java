@@ -1,0 +1,7 @@
+Wire;Cable;Cablear;Alambre;
+Speech;Expresión;Discurso;
+Kernel;Núcleo;Fruto;
+Toggle;Conmutar;Alternar;
+Run;Correr;Convocar;
+Bow;Arco;Inclinarse;Reverencia;Lazo;
+Carry;Llevar;Transportar;Soportar;
