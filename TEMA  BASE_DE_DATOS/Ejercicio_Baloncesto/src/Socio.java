@@ -60,8 +60,8 @@ public class Socio {
 
     @Override
     public String toString() {
-        return "Socio [id=" + id + ", nombre=" + nombre + ", estatura=" + estatura + ", edad=" + edad + ", localidad="
-                + localidad + "]";
+        return "Socio [id=" + id + ", nombre= " + nombre + ", estatura= " + estatura + ", edad= " + edad + ", localidad= "
+                + localidad + "]\n\n\n";
     }
 
 }
