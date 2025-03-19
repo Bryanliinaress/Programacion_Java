@@ -77,6 +77,7 @@ public class DreamTeam {
         System.out.print("Dime el ID del socio a modificar: ");
         socioID= SC.nextInt();
         System.out.println();
+        SC.nextLine();
         System.out.print("Dime el nuevo nombre del socio: ");
         nombre= SC.nextLine();
         System.out.println();
@@ -99,7 +100,7 @@ public class DreamTeam {
         String formaOrdenar ;
         System.out.print("Dime como quieres ordenar la lista: ");
         formaOrdenar = SC.nextLine();
-        miGestor.requestAll(formaOrdenar);
+        System.out.println(miGestor.requestAll(formaOrdenar).toString());
     }
 
 
@@ -109,20 +110,27 @@ public class DreamTeam {
         System.out.println("Ahora dime sobre que valor quieres filtrar: ");
         if (columna.equals("nombre") || columna.equals("localidad")) {
             String valor =SC.nextLine();
-            miGestor.query(columna,valor);
+            System.out.println(miGestor.query(columna,valor)); 
         }else{
             int valor = SC.nextInt();
-            miGestor.query(columna, valor);
+            System.out.println(miGestor.query(columna, valor)); 
         }
         
+    }
+
+    public static void mostrarUnSocio() throws SQLException{
+        System.out.println("Dime el id del socio a mostrar: ");
+        int idSocio = SC.nextInt();
+        System.out.println( miGestor.requestById(idSocio));
     }
 
     public static void main(String[] args) throws Exception {
         
         //anadirSocio();
-        bajaSocio();
+        //bajaSocio();
         //modificarSocio();
         //listarTodos();
         //consultaFiltrada();
+        //mostrarUnSocio();
     }
 }

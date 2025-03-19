@@ -45,14 +45,14 @@ public class GestorSocios implements CRUD<Socio> {
 
     @Override
     public boolean delete(int id) throws SQLException {
-        String sqlQquerry = "DELETE FROM socio WHERE socioID = ?" + id;
+        String sqlQquerry = "DELETE FROM socio WHERE socioID = ?";
         try (PreparedStatement stmt = this.conn.prepareStatement(sqlQquerry)) {
             stmt.setInt(1, id);
             int affectedRows = stmt.executeUpdate();
             if (affectedRows == 0) {
                 throw new SQLException("No se pudo eliminar el socio");
             }
-            return affectedRows==1;
+            return affectedRows == 1;
         } catch (SQLException e) {
             throw e;
         }
@@ -62,7 +62,7 @@ public class GestorSocios implements CRUD<Socio> {
     public ArrayList<Socio> query(String column, String value) throws SQLException {
         List<String> validColumns = Arrays.asList("nombre", "localidad");
         if (!validColumns.contains(column))
-        
+
             throw new SQLException("Columna no válida");
 
         ArrayList<Socio> result = new ArrayList<Socio>();
@@ -90,22 +90,22 @@ public class GestorSocios implements CRUD<Socio> {
 
     @Override
     public Socio requestById(int id) throws SQLException {
-        String sqlQquerry = "SELECT * FROM socio  WHERE socioID = " + id;
-        Socio resultado = new Socio(id, sqlQquerry, id, id, sqlQquerry);
-        try (Statement stmt = this.conn.prepareStatement(sqlQquerry)) {
-            ResultSet queryResultSet = stmt.executeQuery(sqlQquerry);
-            if (queryResultSet.getInt("socioID") == id) {
-                int socioID = queryResultSet.getInt("socioID");
-                String nombre = queryResultSet.getString("nombre");
-                int estatura = queryResultSet.getInt("estatura");
-                int edad = queryResultSet.getInt("edad");
-                String localidad = queryResultSet.getString("localidad");
-                Socio socioAMostrar = new Socio(socioID, nombre, estatura, edad, localidad);
-                resultado = socioAMostrar;
+        String sqlQquerry = "SELECT * FROM socio  WHERE socioID = ?";
+        Socio socioAMostrar = new Socio(id, sqlQquerry, id, id, sqlQquerry);
+        try (PreparedStatement stmt = this.conn.prepareStatement(sqlQquerry)) {
+            stmt.setInt(1, id);
+            ResultSet querySet = stmt.executeQuery();
+            while (querySet.next()) {
+                int socioID = querySet.getInt("socioID");
+                String nombre = querySet.getString("nombre");
+                int estatura = querySet.getInt("estatura");
+                int edad = querySet.getInt("edad");
+                String localidad = querySet.getString("localidad");
+                socioAMostrar = new Socio(socioID, nombre, estatura, edad, localidad);
             }
-            return resultado;
+            return socioAMostrar;
         } catch (Exception e) {
-            return null;
+            throw e;
         }
     }
 
@@ -117,36 +117,40 @@ public class GestorSocios implements CRUD<Socio> {
         String nombre = socio.getNombre();
         String localidad = socio.getLocalidad();
 
-        String querryAEjecutar = "UPDATE socio SET nombre =" + nombre + ", estatura=" + estatura + ", edad=" + edad
-                + ", localidad=" + localidad + " WHERE socioID= " + socioID;
-        try (Statement stmt = this.conn.prepareStatement(querryAEjecutar)) {
-            int affectedRows = stmt.executeUpdate(querryAEjecutar);
-            if (affectedRows == 1) {
-                return true;
-            } else {
-                return false;
-            }
+        String querryAEjecutar = "UPDATE socio SET nombre =?, estatura=?, edad=?, localidad=? WHERE socioID=?";
+        try (PreparedStatement stmt = this.conn.prepareStatement(querryAEjecutar)) {
+            stmt.setString(1, nombre);
+            stmt.setInt(2, estatura);
+            stmt.setInt(3, edad);
+            stmt.setString(4, localidad);
+            stmt.setInt(5, socioID);
+
+            int affectedRows = stmt.executeUpdate();
+            if (affectedRows == 0)
+                throw new SQLException("Error al hacer el update.");
+
+            return affectedRows == 1;
         } catch (Exception e) {
-            return false;
+            throw e;
         }
     }
 
     @Override
     public ArrayList<Socio> requestAll(String sortedBy) throws SQLException {
         ArrayList<Socio> resultado = new ArrayList<Socio>();
-        String sqlQuerry = "SELECT * FROM socio";
+        String sqlQuerry = "SELECT * FROM socio ";
         if (!sortedBy.isEmpty())
             sqlQuerry += "ORDER BY " + sortedBy;
 
         try (Statement stmt = this.conn.createStatement()) {
-            ResultSet querrySet = stmt.executeQuery(sqlQuerry);
+            ResultSet querySet = stmt.executeQuery(sqlQuerry);
 
-            while (querrySet.next()) {
-                int socioID = querrySet.getInt("socioID");
-                String nombre = querrySet.getString("nombre");
-                int estatura = querrySet.getInt("estatura");
-                int edad = querrySet.getInt("edad");
-                String localidad = querrySet.getString("localidad");
+            while (querySet.next()) {
+                int socioID = querySet.getInt("socioID");
+                String nombre = querySet.getString("nombre");
+                int estatura = querySet.getInt("estatura");
+                int edad = querySet.getInt("edad");
+                String localidad = querySet.getString("localidad");
                 resultado.add(new Socio(socioID, nombre, estatura, edad, localidad));
             }
             return resultado;
