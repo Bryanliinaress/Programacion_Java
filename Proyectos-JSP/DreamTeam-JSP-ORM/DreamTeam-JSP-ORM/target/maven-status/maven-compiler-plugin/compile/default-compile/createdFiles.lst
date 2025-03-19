@@ -1,0 +1,6 @@
+cpifp\alanturing\baloncestomejorado\resources\JakartaEE10Resource.class
+pool\ConnectionPool.class
+cpifp\alanturing\baloncestomejorado\JakartaRestConfiguration.class
+socios\Socio.class
+socios\GestorSocios.class
+crud\CRUD.class
